@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<p th:text="${pipka.getId()}">val</p>
+<p th:text="${pipka.getName()}">val</p>
+
+
+<a th:href="@{/customers/{id}/edit(id=${pipka.getId()})}">Edit</a>
+
+
+<form th:method="DELETE" th:action="@{/customers/{id}(id=${pipka.getId()})}">
+ <input type="submit" value="Delete"/>
+</form>
+
+
+</body>
+
+</html>

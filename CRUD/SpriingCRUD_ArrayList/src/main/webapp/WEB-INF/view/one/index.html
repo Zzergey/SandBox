@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+
+<div th:each="person : ${customerList}">
+    <a th:href="@{/customers/{id}(id= ${person.getId()})}" th:text="${person.getName()}" href="">user</a>
+</div>
+
+<br/>
+<hr/>
+<a href="/customers/new" >new</a>
+
+
+</body>
+
+
+</html>
